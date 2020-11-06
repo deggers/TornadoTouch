@@ -11,7 +11,7 @@ javafx {
 }
 
 application {
-    mainClassName = "de.deggers.application.ApplicationRunner"
+    mainClassName = "de.deggers.demo.ApplicationRunner"
     applicationDefaultJvmArgs = listOf(
         "--add-opens=javafx.graphics/javafx.scene=ALL-UNNAMED"
     )
