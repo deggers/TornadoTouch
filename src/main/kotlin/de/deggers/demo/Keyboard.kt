@@ -20,7 +20,7 @@ class Keyboard : View() {
   )
 
   override val root = vbox {
-    paddingAll = 20
+    paddingAll = 22
     prefWidth = 800.00
     prefHeight = 300.00
 
