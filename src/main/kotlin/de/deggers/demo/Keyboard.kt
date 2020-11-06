@@ -25,7 +25,9 @@ class Keyboard : View() {
     prefHeight = 300.00
 
     setOnKeyPressed { event ->
+      // @TODO find pressed letter in map<String,Button>
       if (event.text.toLowerCase() == "q") {
+        // @TODO extract this to a stylesheet
         q.style {
           maxWidth = 18.mm
           minWidth = 18.mm
@@ -38,7 +40,9 @@ class Keyboard : View() {
     }
 
     setOnKeyReleased { event ->
+      // @TODO find pressed letter in map<String,Button>
       if (event.text.toLowerCase() == "q") {
+        // @TODO extract this to a stylesheet
         q.style {
           maxWidth = 18.mm
           minWidth = 18.mm
@@ -46,7 +50,7 @@ class Keyboard : View() {
           minHeight = 18.mm
           padding = CssBox(-8.mm, 0.mm, 0.mm, -8.mm)
           fontSize = 22.px
-          }
+        }
       }
     }
 
@@ -55,6 +59,7 @@ class Keyboard : View() {
       alignment = Pos.TOP_LEFT
 
       firstRow.forEach { button: Button ->
+        // @TODO use stylesheet
         button.style {
           maxWidth = 18.mm
           minWidth = 18.mm
@@ -62,8 +67,7 @@ class Keyboard : View() {
           minHeight = 18.mm
           padding = CssBox(-8.mm, 0.mm, 0.mm, -8.mm)
           fontSize = 22.px
-        }
-        add(button)
+        }.also { add(button) }
       }
     }
   }
